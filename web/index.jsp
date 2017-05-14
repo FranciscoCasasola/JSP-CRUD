@@ -1,7 +1,7 @@
 <%-- 
     Document   : index.jsp
     Created on : 07-may-2017, 22:54:43
-    Author     : PcCom
+    Author     : Francisco
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -15,8 +15,8 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Screens</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/bootstrap.min.css" >
+        <link rel="stylesheet" href="css/bootstrap.css" >
         
     </head>
     <body>
@@ -30,9 +30,9 @@
         %>
         
         <div>
-            <h3>
-            <a class= "btn-primary" href = "añadir.jsp"> Añadir Monitor</a>
-            </h3>
+            <form method = "GET" action = "añadir.jsp">
+                <button class = "btn btn-default" type = "submit">Añadir monitor</button> 
+            </form>
         </div>
         
         

@@ -1,7 +1,7 @@
 <%-- 
     Document   : modificar
     Created on : 08-may-2017, 0:47:03
-    Author     : PcCom
+    Author     : Francisco
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -15,7 +15,10 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Modificar</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css" >
+        <link rel="stylesheet" href="css/bootstrap.css" >
     </head>
+    <body>
     
         <%
             Class.forName("com.mysql.jdbc.Driver");
@@ -26,15 +29,38 @@
           
             
         %>
-        
-        <div style = "width: 45%">
-            <form action="mod.jsp" method = "POST">
-                Id <input type="hidden" name="Id" value="<%= request.getParameter("Id") %>" /> 
-                Modelo <input type="text" name="modelo" value="<%= request.getParameter("modelo") %>" /> </br>
-                Marca <input type="text" name="marca" value="<%= request.getParameter("marca") %>" /> </br>
-                Precio<input type= "text"  name="precio" value="<%= request.getParameter("precio") %>"  /> </br>
-                Descripcion <input type="text" name="descripcion" value= "<%= request.getParameter("descripcion") %>" /> </br>
-                <input class ="btn btn-default" type="submit" value="Registrar"/> <br>
+        <div class="container">
+            <h2>Modificar monitor</h2>
+            <form class="form-horizontal" action="mod.jsp" method = "POST">
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="pwd">Modelo:</label>
+                    <div class="col-sm-10">          
+                        <input type="text" name="modelo" value="<%= request.getParameter("modelo") %>" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="pwd">Marca:</label>
+                    <div class="col-sm-10">          
+                        <input type="text" name="marca" value="<%= request.getParameter("marca") %>" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="pwd">Precio:</label>
+                    <div class="col-sm-10">          
+                        <input type="text" name="precio" value="<%= request.getParameter("precio") %>" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="pwd">Descripción</label>
+                    <div class="col-sm-10">          
+                        <input type="text" name="descripcion" value= "<%= request.getParameter("descripcion") %>" /> 
+                    </div>
+                </div>
+                <div class="form-group">        
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <input class ="btn btn-default" type="submit" value="Registrar"/>
+                    </div>
+                </div>
             </form>
         </div>
         <%
